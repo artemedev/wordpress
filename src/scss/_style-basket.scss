@@ -1,0 +1,219 @@
+@import "fonts";
+
+.basket {
+  max-width: 1000px;
+  margin: 130px auto;
+  &__inner {
+    //max-width: 1000px;
+    padding: 60px;
+    //margin: 0 auto;
+    color: #372821;
+    box-shadow: 0px 3px 26px rgba(0, 0, 0, 0.07);
+  }
+  &__title {
+    @extend %gothampro-bold;
+    text-align: center;
+    font-size: calc(30px + (45 - 30) * ((100vw - 375px) / (1600 - 375)));
+    line-height: calc(40px + (56 - 40) * ((100vw - 375px) / (1600 - 375)));
+    margin-bottom: 55px;
+  }
+  &__cards {
+    max-width: 880px;
+    margin: 0 auto;
+    border-top: 1px solid#C8C8C8;
+    border-bottom: 1px solid#C8C8C8;
+  }
+  &__card {
+    display: flex;
+  }
+  &__сheckout {
+    margin-top: 50px;
+    margin-left: 35px;
+  }
+}
+.card {
+  &__img {
+    margin: 25px 0;
+    box-shadow: 0px 3px 26px rgba(0, 0, 0, 0.07);
+  }
+  &__description {
+    margin-top: 45px;
+    margin-left: 45px;
+  }
+  &__title {
+    font-size: calc(14px + (20 - 14) * ((100vw - 375px) / (1600 - 375)));
+    line-height: calc(22px + (28 - 22) * ((100vw - 375px) / (1600 - 375)));
+  }
+  &__information {
+    margin-top: 10px;
+    font-size: calc(10px + (16 - 10) * ((100vw - 375px) / (1600 - 375)));
+    line-height: calc(14px + (20 - 14) * ((100vw - 375px) / (1600 - 375)));
+  }
+  &__quantity {
+    margin-top: 40px;
+    display: flex;
+    border: 0.4px solid #eeeeee;
+    width: 90px;
+    height: 29px;
+    justify-content: space-between;
+  }
+  &__value {
+    margin: auto 0 auto auto;
+    align-items: center;
+    text-align: center;
+  }
+}
+.quantity {
+  &__high {
+    border: none;
+    text-decoration: none;
+    background-color: #fff;
+    width: 30px;
+  }
+  &__low {
+    border: none;
+    text-decoration: none;
+    background-color: #fff;
+    width: 30px;
+  }
+}
+.value {
+  &__discount {
+    font-size: 18px;
+    line-height: 18px;
+    color: #8e8e8e;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+  &__price {
+    font-size: 40px;
+    line-height: 142.9%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+  }
+  &__price span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+  }
+}
+.checkout {
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 142.9%;
+  }
+  &__group + &__group {
+    margin-top: 75px;
+  }
+  &__promo {
+  }
+  &__promo input {
+    width: 282px;
+    height: 57px;
+    background: #f2f2f2;
+    border: none;
+  }
+  &__total {
+    display: flex;
+    flex-direction: row;
+  }
+  &__total-text {
+    font-size: 20px;
+    line-height: 142.9%;
+    padding-right: 80px;
+    margin: auto 0;
+  }
+  &__total-num {
+    font-size: 40px;
+    line-height: 142.9%;
+    @extend %gothampro-bold;
+  }
+  &__total-num span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+  }
+  &__back-shopping {
+    margin: auto 0;
+    text-decoration: underline;
+  }
+  &__btn {
+    position: relative;
+  }
+  &__bg {
+    width: 278px;
+    height: 60px;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    z-index: 10;
+  }
+  &__btn:hover &__bg::before {
+    content: "";
+    position: absolute;
+    background-color: #f2f2f2;
+    width: 278px;
+    height: 60px;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+  }
+  &__text {
+    position: absolute;
+    width: 278px;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 540px) {
+  .basket {
+    &__inner{
+      padding: 20px;
+    }
+    &__card {
+      flex-direction: column;
+    }
+    &__сheckout{
+      margin-left: 0;
+    }
+  }
+  .card {
+    &__img {
+      object-fit: contain;
+    }
+    &__value{
+      margin: auto;
+    }
+    &__description{
+      margin: auto;
+    }
+    &__quantity{
+      margin: auto;
+    }
+  }
+  .checkout {
+    &__back-shopping {
+      display: none;
+    }
+    &__btn{
+      margin: auto;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .checkout {
+    &__group {
+      flex-direction: column;
+    }
+  }
+}

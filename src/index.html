@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    @@include('_header.html')
+    @@include('_headline.html')
+     <section class="category">
+        <div class="container">
+            <div class="category__inner">
+                <h2 class="category__title">
+                    ОБЩИЕ КАТЕГОРИИ
+                </h2>
+                @@include('_category.html')
+
+            </div>
+        </div>
+    </section>
+    <!-- // <main class="main"> -->
+    <section class="history">
+        <!-- //<div class="container"> -->
+        <div class="history__inner ">
+            <img class="history__image" src="image/history-img.jpg" alt="">
+
+            <div class="history__content container">
+                <h2 class="history__title">
+                    НАША ИСТОРИЯ
+                </h2>
+                <div class="history__box">
+                    <p class="history__text">
+                        Подводка высыхает за считанные секунды после нанесения, не скатывается
+                        и не отпечатывается на верхнем веке. В комплекте с подводкой вы найдете
+                        миниатюрную кисть, с помощью которой легко регулировать толщину и
+                        интенсивность стрелок. Beauty Glazed Eyeliner Gel — волшебная палочка
+                        в мире
+                    </p>
+                    <div class="history__container">
+
+                        <a href="#" class="history__youtube">
+                            <div class="youtube__img">
+                                <svg class="youtube__play" style="width:101px;height:59px" fill="none">
+                                    <rect x="0.5" y="0.5" width="56" height="56" stroke="#372821" />
+                                    <path class="play-animation" d="M36 28.5L24.75 34.9952V22.0048L36 28.5Z"
+                                        fill="#372821" />
+                                    <rect x="52" y="29" width="1" height="47" transform="rotate(-90 52 29)"
+                                        fill="#372821" />
+                                </svg>
+                            </div>
+                            <p class="youtube__text">Краткий видео-обзор</p>
+                        </a>
+                        @@include('_inshop-btn.html')
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="top-category">
+        <div class="container">
+            <h2 class="top-category__title">
+                ТОП КАТЕГОРИЯ
+                <span>Косметики MURAN</span>
+            </h2>
+            <div class="top-category__inner">
+                @@include('_top-category.html')
+                <div class="product__cards-holder">
+
+                    @@include('_product.html')
+                    @@include('_product.html')
+                    @@include('_product.html')
+                    @@include('_product.html')
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- </main> -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__sidebar">
+                    <div class="footer__sidebar-left">
+                        <h2 class="footer__sidebar-left-title">MURAN</h2>
+                        <h3 class="footer__sidebar-left-subtitle">
+                            Официальный
+                            представитель в Украине
+                        </h3>
+                        <div class="footer__sidebar-social">
+                            <a href="#" class="footer__social-link">
+                                <svg class="line-animation" style="width:69px;height:69px">
+                                    <use xlink:href="image/asas.svg#icon-inst" class="social-inner social-line">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg class="line-animation" style="width:69px;height:69px">
+                                    <use xlink:href="image/asas.svg#icon-twit" class="social-inner social-line">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg class="line-animation" style="width:69px;height:69px">
+                                    <use xlink:href="image/asas.svg#icon-facebook" class="social-inner social-line">
+                                    </use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__sidebar-right">
+                        <div class="footer__sidebar-nav">
+                            <h4 class="footer__sidebar-right-title">
+                                Навигация по сайту
+                            </h4>
+                            <ul class="footer__list">
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Продукция</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Контакы</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Доставка</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Корзина</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__sidebar-contacts">
+                            <h4 class="footer__sidebar-right-title">
+                                Наши контакты
+                            </h4>
+                            <ul class="footer__list">
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">T: 098 738 12 93</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Украина, г. Харьков, пл. Конституции, 31</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__aside">
+                    <ul class="footer__aside-list">
+                        <li class="footer__aside-list-item">
+                            <a class="footer__aside-list-link" href="#">Политика конфиденциональности</a>
+                        </li>
+                        <li class="footer__aside-list-item">
+                            <a class="footer__aside-list-link" href="#">Договор оферты</a>
+                        </li>
+                        <li class="footer__aside-list-item">
+                            <a class="footer__aside-list-link" href="#">Разработка сайта</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="image-view"></div>
+
+        <div class="image-box">
+            <div id="prev-btn"></div>
+            <div id="next-btn"></div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modal-image.js" async defer></script>
+</body>
+
+</html>

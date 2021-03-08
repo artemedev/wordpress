@@ -1,0 +1,8 @@
+.eslintrc
+*.json
+LICENSE
+phpcs.xml.dist
+README.md
+readme.txt
+node_modules/*
+modis
